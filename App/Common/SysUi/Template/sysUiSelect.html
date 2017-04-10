@@ -1,0 +1,27 @@
+<div class="sysUiSelect">
+        <div class="wj-select-single" ng-click="evToggleExpand($event)">
+            <span>{{data.selectedItem.text}}</span>
+            <i class="fa fa-unsorted">
+            </i>
+        </div>
+        <div class="wj-select-wrapper" ng-show="data.expand" ng-class="{'wj-select-expand':data.expand}">
+            <div class="wj-select-filter" ng-if="data.filter">
+                <div class="input-group">
+                    <input type="text" class="form-control" ng-model="search.filterStr"/>
+                    <span class="input-group-addon"><i class="fa fa-search"></i></span>
+                </div>
+            </div>
+            <ul class="wj-select-list wj-scrollbar" ng-class="{'wj-select-list-filter':data.filter}">
+                <li class="wj-select-item"
+                    ng-repeat="item in data.items|optionFilter:search.filterStr track by item.value "
+                    ng-click="evItemClick(item, $index)"
+                    ng-class="{'wj-selected': item.value===data.selectedItem.value,'wj-select-icon-item':data.icon,'disabled':item.disabled}">
+                    <div class="wj-select-icon" ng-if="data.icon"><img ng-src="{{item.icon}}"/></div>
+                    <span>{{item.text}}</span>
+                    <i class="fa fa-check"></i>
+                </li>
+            </ul>
+        </div>
+
+    </div>
+

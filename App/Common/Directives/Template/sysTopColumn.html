@@ -1,0 +1,6 @@
+<div class="m-sysTopColumn">
+    <ul class="m-systopNav">
+        <li ng-repeat="v in system.TopColumn" ng-class="{true:'active'}[v.id==system.TopColumnCurrentId]"><a
+                ng-click="click(v.id,v.name)" href="javascript:void(0)">{{v.title}}<span class="selected"></span> </a></li>
+    </ul>
+</div>

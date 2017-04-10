@@ -1,0 +1,24 @@
+<div class="sysNavBtn">
+    <div class="m-develop-box">
+
+        <span class="m-develop-btn" ng-show="isShowBtn" ng-click="show()"><i class="fa fa-hand-o-right" aria-hidden="true"></i>点击编辑栏目</span>
+
+        <!--<form target="m-develop-frame" method = "post"  action = 'http://www.m-whaley.cn/php/index.php'>
+
+            <input type="hidden" name = "m-sysAppServicePort">
+            <input type="hidden" name = "m-sysAppColumn">
+            <input style="display: none" id="m-develop-frame-btn" type="submit">
+        </form>-->
+
+        <div class="m-develop-frame-box" ng-show="isShow" style="">
+            <div class="m-develop-frameDiv">
+                <!--<span>正在智能载入...</span>-->
+                <!--<iframe id="m-develop-frame" name="m-develop-frame" src=""></iframe>-->
+
+                <develop-column></develop-column>
+
+            </div>
+
+        </div>
+    </div>
+</div>

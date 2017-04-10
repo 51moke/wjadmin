@@ -1,0 +1,197 @@
+@borderColor: #F2F2F2;
+@borderRadius: 3px;
+@fontSize: 12px;
+@baseColor: #666;
+@inputPadding: 0 10px;
+@menuPadding: 0 55px;
+@inputColor: #666;
+@inputWidth: 192px;
+@menuWidth: 182px;
+@inputHeight: 34px;
+@menuHeight: 42px;
+@inputItemHeight: 34px;
+@selectZindex: 999;
+@inserShadowColor: #ddd;
+@shadowColor: #bbb;
+@itemHoverBgColor: #eaf8fe;
+@itemHoverColor: #2db7f5;
+@itemSelectedColor: #2db7f5;
+@backgroundGradient: -webkit-gradient(linear, 0% 0%, 0% 100%, from(#FFFFFF), to(#F5F5F5));
+@backgroundColor: #F5F5F5;
+@hoverColor: #000;
+@hoverBorderColor: #bbb;
+@disabledColor: #CACACA;
+@btnBgColor: #1e8ff3;
+@btnHoverBgColor: #0c5af3;
+
+.borderAll {
+  border: 1px solid @borderColor;
+  border-radius: @borderRadius;
+}
+.boxShadow {
+  box-shadow: 0 2px 5px @shadowColor;
+}
+.boxSizing {
+  box-sizing: border-box;
+}
+
+
+.sysUiSelect{
+    position: relative;
+    .borderAll;
+    width: @inputWidth;
+    height: @inputHeight;
+    line-height: @inputHeight;
+    font-size: @fontSize;
+    color: @inputColor;
+    background: @backgroundColor;
+    background: @backgroundGradient;
+    .boxShadow;
+    cursor: pointer;
+
+    .wj-select-wrapper {
+      position: absolute;
+      width: 100%;
+      transform: scale(0);
+      opacity: 0;
+      transform-origin: top left;
+      transition: transform opacity;
+      transition-duration: 250ms;
+      z-index: @selectZindex;
+    }
+
+    .wj-select-filter {
+      border-bottom: 1px solid #E8E6E6;
+      border: 1px solid @borderColor;
+      border-top: none;
+      .boxShadow;
+      width: 101%;
+      left: -1px;
+      position: absolute;
+      background: #fff;
+
+      .input-group {
+        width: 92%;
+        height: @inputItemHeight;
+        margin: 10px auto;
+      }
+
+      .input-group-addon {
+        padding: 6px 15px !important;
+      }
+    }
+
+    .wj-select-expand {
+      transform: scale(1);
+      opacity: 1;
+    }
+
+    .wj-select-single {
+      position: relative;
+      width: 100%;
+      height: 100%;
+      padding: @inputPadding;
+      .boxSizing;
+
+      &:hover {
+        color: @hoverColor;
+      }
+    }
+
+    i {
+      position: absolute;
+      right: 10px;
+      font-size: @fontSize+4;
+      top: 8px;
+    }
+
+    ul {
+      position: absolute;
+      background: #fff;
+      width: @inputWidth;
+      margin: 0;
+      padding: 0;
+      max-height: 200px;
+      overflow-x: hidden;
+      overflow-y: auto;
+      top: 0;
+      left: -1px;
+      border: 1px solid @borderColor;
+      border-top: none;
+      .boxShadow;
+    }
+
+    .wj-select-list-filter {
+      top: 54px !important;
+    }
+
+    ul li {
+      line-height: @inputItemHeight;
+      height: @inputItemHeight;
+      padding: @inputPadding;
+      .boxSizing;
+      cursor: pointer;
+      position: relative;
+
+      i {
+        position: absolute;
+        right: 10px;
+        font-size: @fontSize+2;
+        top: 8px;
+        display: none;
+      }
+
+      &:hover {
+        color: @itemHoverColor;
+        background: @itemHoverBgColor;
+      }
+    }
+
+    ul li.disabled {
+      cursor: not-allowed !important;
+      color: @disabledColor !important;
+
+      &:hover {
+        background: #fff;
+      }
+    }
+
+    .wj-selected {
+      color: @itemSelectedColor;
+
+      i {
+        display: block;
+      }
+
+      span {
+        font-weight: bold;
+      }
+    }
+
+    .wj-select-icon-item {
+      margin: 10px;
+
+      span {
+        padding-left: @inputItemHeight;
+      }
+    }
+
+    .wj-select-icon {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: @inputItemHeight;
+      height: @inputItemHeight;
+      border-radius: @inputItemHeight;
+
+      img {
+        position: absolute;
+        top: 0;
+        left: 0;
+        max-width: 100%;
+        border: none;
+        border-radius: @inputItemHeight;
+      }
+    }
+
+}

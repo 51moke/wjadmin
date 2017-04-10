@@ -1,0 +1,58 @@
+<div class="sysColumn">
+
+    <div class="m-wrap container">
+
+        <div class="m-modulesBox" ng-repeat="v in tree">
+            <div class="m-navModuleTable">
+                <table>
+                    <thead>
+                    <tr>
+                        <th>模块名称</th>
+                        <th>路由标识（字母开头,不可修改）</th>
+                        <th>显示顺序</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    <tr class="form-inline">
+
+                        <td><div class="applist appNameList"><input class="form-control" type="text"  ng-model="sysAppColumn[v.id].title"></div></td>
+                        <td><div class="applist appRouterId"><input ng-if="v.newadd" class="form-control" type="text"  ng-model="sysAppColumn[v.id].state"><input ng-if="!v.newadd" disabled="disabled" class="form-control" type="text"  ng-model="sysAppColumn[v.id].state"></div></td>
+                        <td><div class="applist appSort"><input class="form-control" type="text" ng-model="sysAppColumn[v.id].sort">
+
+                            <span class="eShow" ng-if="tpmData.emptytitle[v.id]">标题不可以为空</span><span class="eShow" ng-if="tpmData.estate[v.id]">路由标识不可以为空</span><span class="eShow" ng-if="tpmData.e2state[v.id]">路由标识已经存在</span>
+
+                        </div></td>
+                    </tr>
+                    </tbody>
+                </table>
+            </div>
+            <div class="m-navListTable">
+                <table>
+                    <thead>
+                    <tr>
+                        <th>栏目名称</th>
+                        <th>路由标识（字母开头,不可修改）</th>
+                        <th>显示顺序</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    <tr ng-repeat="z in v.lists" class="form-inline">
+
+                        <td><div class="applist appNameList"><develop-depth i="{{z.depth}}"></develop-depth><input class="form-control" type="text" ng-model="sysAppColumn[z.id].title" placeholder="请输入栏目标题"></div></td>
+                        <td><div class="applist appRouterId"><input ng-if="z.newadd" placeholder="请输入路由标识" class="form-control" type="text"  ng-model="sysAppColumn[z.id].state"><input ng-if="!z.newadd" disabled="disabled" class="form-control" type="text"  ng-model="sysAppColumn[z.id].state"></div></td>
+                        <td><div class="applist appSort"><input class="form-control" type="text" ng-model="sysAppColumn[z.id].sort"><button type="button" class="btn btn-default btn-2" ng-if="z.depth<2" ng-disabled="isLock" ng-click="add(z.id)">添加子栏目</button><!--<button type="button" class="btn btn-default btn-2" ng-click="del(z.id)">删除</button>-->
+
+                            <span class="eShow" ng-if="tpmData.emptytitle[z.id]">标题不可以为空</span><span class="eShow" ng-if="tpmData.estate[z.id]">路由标识不可以为空</span><span class="eShow" ng-if="tpmData.e2state[z.id]">路由标识已经存在</span>
+
+                        </div></td>
+                    </tr>
+                    </tbody>
+                </table>
+                <button type="button" class="btn btn-default btn-1" ng-disabled="isLock" ng-click="add(v.id)">添加一级栏目</button>
+            </div>
+        </div>
+        <button type="button" class="btn btn-default btn-1" ng-disabled="isLock" ng-click="add(0)">添加模块</button>
+    </div>
+    <div style="margin: 10px auto; margin-bottom: 30px; width: 200px;"><button ng-disabled="isLock" type="button" class="btn btn-primary btn-lg btn-block" ng-click="save()">保存</button></div>
+
+</div>

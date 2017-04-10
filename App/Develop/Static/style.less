@@ -1,0 +1,111 @@
+.m-develop-box-body{overflow: hidden}
+
+.m-sys-developBox{
+
+  /*栏目按钮sysNavBtn*/
+  .sysNavBtn{
+    .m-develop-btn{position: fixed; z-index: 600; left: 10px; bottom: 10px;cursor: pointer; display: inline-block; background: /*#f0f8fd*/#999; padding: 6px 10px; border-radius: 8px; font-size: 16px; color: #fff;}
+    .m-develop-btn:hover{ color: #fff; background: #333; border: 1px solid #fff;}
+    .m-develop-btn .fa-hand-o-right
+    {
+
+      color:red;
+      animation:myfirst 5s;
+      -moz-animation:myfirst 5s; /* Firefox */
+      -webkit-animation:myfirst 5s; /* Safari and Chrome */
+      -o-animation:myfirst 5s; /* Opera */
+    }
+
+    @keyframes myfirst
+    {
+      0%   {color:red;}
+      25%  {color:yellow;}
+      50%  {color:blue;}
+      100% {color:green;}
+    }
+
+    @-moz-keyframes myfirst /* Firefox */
+    {
+      0%   {color:red;}
+      25%  {color:yellow;}
+      50%  {color:blue;}
+      100% {color:green;}
+    }
+
+    @-webkit-keyframes myfirst /* Safari and Chrome */
+    {
+      0%   {color:red;}
+      25%  {color:yellow;}
+      50%  {color:blue;}
+      100% {color:green;}
+    }
+
+    @-o-keyframes myfirst /* Opera */
+    {
+      0%   {color:red;}
+      25%  {color:yellow;}
+      50%  {color:blue;}
+      100% {color:green;}
+    }
+    .m-develop-frame-box{position: fixed; z-index: 900; top: 0; right: 0; left: 0; bottom: 0; background: #fff;overflow: auto;}
+    .m-develop-frameDiv{}
+    #m-develop-frame{position: fixed; top: 0; left: 0; right: 0; bottom: 0; display: block; width: 100%; height: 100%;}
+  }
+
+  /*栏目编辑sysColumn*/
+  .sysColumn{
+    .applist.appSort > input {
+      width: 57px;
+      text-align: center;
+    }
+    .m-navListTable  thead > tr > th,.m-navListTable  tbody > tr > td{
+      padding: 3px 5px;
+      text-align: left;
+    }
+
+    .m-nav-depth{display: inline-block;}
+    .m-nav-depth .depth1,.m-nav-depth .depth2{
+      position: relative;
+      display: inline-block;
+      width: 55px;
+      height: 20px;
+    }
+    .m-nav-depth .depth2{
+      width: 111px;
+    }
+    .m-nav-depth .depth1 icon,.m-nav-depth .depth2 icon{
+      position: absolute;
+      left: 0;
+      top: 5px;
+      width: 100%;
+      height: 34px;
+      background: url("images/depth2.png");
+    }
+    .m-nav-depth .depth2 icon{
+      top:-7px;
+      background-position: left bottom;
+    }
+
+    .m-modulesBox {
+      border: 6px solid #346d8d;
+      margin: 5px 0;
+      border-radius: 8px;
+    }
+
+    .m-navModuleTable {
+      background: #346d8d;
+      width: 100%;
+      padding-bottom: 8px;
+      color: #fff;
+    }
+    .m-navModuleTable input{}
+    .m-navModuleTable td,.m-navModuleTable th{padding: 0 5px;}
+    .btn-1{margin: 10px;}
+    .btn-2{margin-left: 10px}
+    button[disabled="disabled"]{background: #eee !important; color: #333 !important;}
+
+    .eShow{color: #f00}
+  }
+
+
+}

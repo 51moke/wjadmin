@@ -1,0 +1,24 @@
+<ul class="sysUiPagination">
+        <li ng-click="prePage()" ng-disabled="id.currentPage===1" class="sysUiPagination-icon">
+            <i class="fa fa-chevron-left"></i>
+        </li>
+        <li ng-click="onclick(1);"   ng-class="{'active':id.currentPage==1}">
+            <a>1</a>
+        </li>
+        <span  ng-if="pre" class="sysUiPagination-jump-pre" ng-click="id.lastJump()">
+        </span>
+        <li ng-repeat="page in pageSizeList track by $index"
+            ng-class="{'active':id.currentPage==($index+pageAround)}"
+            ng-click="onclick($index+pageAround);">
+            <a>{{$index+pageAround}}</a>
+        </li>
+        <span ng-if="after" class="sysUiPagination-jump-aft" ng-click="id.nextJump()">
+        </span>
+        <li ng-if="id.totalCount>1" ng-click="onclick(id.totalCount);" ng-class="{'active':id.currentPage==id.totalCount}">
+            <a>{{id.totalCount}}</a>
+        </li>
+        <li ng-click="nextPage()"  ng-disabled="id.currentPage===id.totalCount"
+            class="sysUiPagination-icon">
+            <i class="fa fa-chevron-right"></i>
+        </li>
+    </ul>

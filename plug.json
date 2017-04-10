@@ -1,0 +1,15 @@
+{
+  "css":[
+    "Static/Style/rewrite.css",
+    "../bower_components/bootstrap/dist/css/bootstrap.min.css",
+    "../bower_components/bootstrap/dist/css/bootstrap-theme.min.css",
+	"../bower_components/font-awesome/css/font-awesome.min.css"
+  ],
+  "js":[
+    "../bower_components/jquery/dist/jquery.js",
+    "../bower_components/angular/angular.js",
+    "../bower_components/angular-ui-router/release/angular-ui-router.js",
+    "../bower_components/oclazyload/dist/ocLazyLoad.js",
+    "../bower_components/bootstrap/dist/js/bootstrap.min.js"
+  ]
+}

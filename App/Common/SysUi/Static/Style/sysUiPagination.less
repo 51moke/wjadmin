@@ -1,0 +1,79 @@
+@primaryColor: #2db7f5;
+@warningColor: #f0ad4e;
+@dangerColor: #ec5840;
+@successColor: #3adb76;
+
+.sysUiPagination {
+  width: 100%;
+  text-align: right;
+
+  li {
+    display: inline-block;
+    height: 28px;
+    line-height: 28px;
+    min-width: 18px;
+    padding: 0 9px;
+    border-radius: 4px;
+    text-align: center;
+    border: 1px solid #d9d9d9;
+    background-color: #fff;
+    margin-right: 4px;
+    cursor: pointer;
+    transition: border 0.5s, color 0.5s;
+
+    a {
+      font-weight: 100;
+      text-decoration: none;
+      color: #666;
+      transition: color 0.5s;
+    }
+
+    &:hover {
+      border: 1px solid @primaryColor;
+
+      a {
+        color: @primaryColor;
+      }
+    }
+  }
+
+  .active {
+    border: 1px solid @primaryColor;
+
+    a {
+      color: @primaryColor;
+    }
+  }
+}
+
+.sysUiPagination-icon {
+  color: #666;
+  font-size: 8px;
+  font-weight: 100;
+}
+
+.sysUiPagination-icon[disabled] {
+  color: #d9d9d9;
+  cursor: not-allowed;
+}
+
+.sysUiPagination-jump-aft:after,
+.sysUiPagination-jump-pre:after {
+  content: "\2022\2022\2022";
+  display: inline-block;
+  letter-spacing: 2px;
+  color: #ccc;
+}
+
+.sysUiPagination-jump-pre:hover {
+  &:after {
+    content: "\003C\003C";
+    color: @primaryColor;
+  }
+}
+.sysUiPagination-jump-aft:hover {
+  &:after {
+    content: "\003E\003E";
+    color: @primaryColor;
+  }
+}

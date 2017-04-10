@@ -1,0 +1,139 @@
+.ace_editor.ace_autocomplete{z-index:99991 !important;}
+.m-sysEdit-pos {
+
+  &:before{
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 42px;
+    cursor: no-drop;
+  }
+  &:after{
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    width: 180px;
+    cursor: no-drop;
+  }
+
+  display: none;
+  position: fixed;
+  z-index: 800;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  right: 0;
+ .m-sysEdit-conpos{
+   position: absolute;
+   top: 76px;
+   left: 180px;
+   right: 0;
+   bottom: 0;
+   overflow: auto;
+ }
+}
+
+
+.m-sysEdit{
+  position: fixed; top: 0px; left: 0px; right: 0; height: 0; z-index: 810;
+  .m-editBtns {
+    position: absolute;
+    right: 0;
+    top: 42px;
+  }
+  .m-editBtns .btn {
+    margin-right: 10px;
+  }
+
+
+}
+.m-sysEdit-box{
+  &>div{
+    margin-top: 10px;
+    border: 1px solid lightgray;
+  }
+  position: relative;
+  z-index: 250;
+  /*display: none;*/
+  margin: 10px;
+
+  .breadcrumb {
+    background: #e8e8e8;
+    margin-bottom: 0;
+    color: #23527c;
+  }
+  .ace_editor {
+
+    /*position: relative !important;*/
+    border: none;
+    margin: auto;
+    height: 300px;
+    width: 100%;
+  }
+
+  .ace_editor.fullScreen {
+    height: auto;
+    width: auto;
+    border: 0;
+    margin: 0;
+    position: fixed !important;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: 10;
+  }
+
+  .fullScreen {
+    overflow: hidden
+  }
+
+  .scrollmargin {
+    height: 500px;
+    text-align: center;
+  }
+
+  .large-button {
+    color: lightblue;
+    cursor: pointer;
+    font: 30px arial;
+    padding: 20px;
+    text-align: center;
+    border: medium solid transparent;
+    display: inline-block;
+  }
+  .large-button:hover {
+    border: medium solid lightgray;
+    border-radius: 10px 10px 10px 10px;
+    box-shadow: 0 0 12px 0 lightblue;
+  }
+}
+
+.m-sysEdit .m-editBtns .btn .fa{ margin-right: 5px;}
+.m-sysEdit .m-editBtns .btn-info{ background: #999999; border-color: #ccc;}
+.m-sysEdit .m-editBtns .btn-info:focus{
+  background: #000;
+  background-position: 0 0px;
+  outline: none;
+}
+.m-sysEdit .m-editBtns .btn-info:active{
+  background: #000;
+  background-position: 0 0px;
+  text-decoration: none;
+}
+.m-sysEdit .m-editBtns .btn-info:visited{
+  background: #000;
+  background-position: 0 0px;
+  text-decoration: none;
+}
+
+.m-sysEdit .m-editBtns .btn-info:hover {
+  color: #fff;
+  background: #333;
+  border-color: #999;
+}
+.m-sysEdit .m-editBtns button[disabled].btn-info:hover{border-color: #ccc;background: #999999;}

@@ -1,0 +1,7 @@
+<div class="m-sysPosition">
+    <!--<h3> {{system.currentData.title}}</h3>-->
+    <ul class="breadcrumb m-breadcrumb">
+        <li ng-repeat="v in system.currentData.sysData.position | orderBy:'$index':true" ng-if="($index+1)!=system.currentData.sysData.position.length"><a>{{v.title}}</a></li>
+        <li>{{system.currentData.title}}</li>
+    </ul>
+</div>

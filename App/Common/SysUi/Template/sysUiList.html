@@ -1,0 +1,16 @@
+<div class="sysUiList">
+    <table class="table table-hover table-bordered">
+        <thead><tr><th ng-repeat="o in itemHead">{{o.title}}</th></tr></thead>
+        <tbody>
+            <tr ng-repeat="(i,o) in itemList track by $index">
+                <td ng-repeat="(key,headObj) in itemHead">
+                    <div class="m-g-table-td" ng-if="!o[key]['#btn#']">{{o[key]}}</div>
+                    <div class="m-g-table-btns" ng-if="o[key]['#btn#']">
+                        <button ng-repeat="(bi,btn) in o[key].data" class="btn {{btn.addclass||'btn-default'}}" type="submit" ng-click="onbtn(key,bi, i)">{{btn.title}}</button>
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+

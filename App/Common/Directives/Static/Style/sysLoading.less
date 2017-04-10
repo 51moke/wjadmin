@@ -1,0 +1,41 @@
+@keyframes scale {
+  30% {
+    -webkit-transform: scale(0.3);
+    transform: scale(0.3); }
+
+  100% {
+    -webkit-transform: scale(1);
+    transform: scale(1); } }
+.m-sysLoading{
+  position: fixed;
+  left:0;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 9999;
+
+  &:after{content: ""; position: absolute; top: 0; right:0; bottom: 0; left: 0; z-index: -1; background: #000; opacity: 0.5;}
+  .m-sysLoadingBox{position: absolute; left: 0; right: 0; top: 50%; height: 24px; margin-top: -12px; text-align: center;}
+  .ball-pulse > div:nth-child(0) {
+    -webkit-animation: scale 0.75s 0s infinite cubic-bezier(.2, .68, .18, 1.08);
+    animation: scale 0.75s 0s infinite cubic-bezier(.2, .68, .18, 1.08); }
+  .ball-pulse > div:nth-child(1) {
+    -webkit-animation: scale 0.75s 0.12s infinite cubic-bezier(.2, .68, .18, 1.08);
+    animation: scale 0.75s 0.12s infinite cubic-bezier(.2, .68, .18, 1.08); }
+  .ball-pulse > div:nth-child(2) {
+    -webkit-animation: scale 0.75s 0.24s infinite cubic-bezier(.2, .68, .18, 1.08);
+    animation: scale 0.75s 0.24s infinite cubic-bezier(.2, .68, .18, 1.08); }
+  .ball-pulse > div:nth-child(3) {
+    -webkit-animation: scale 0.75s 0.36s infinite cubic-bezier(.2, .68, .18, 1.08);
+    animation: scale 0.75s 0.36s infinite cubic-bezier(.2, .68, .18, 1.08); }
+  .ball-pulse > div {
+    background-color: #fff;
+    width: 15px;
+    height: 15px;
+    border-radius: 100%;
+    margin: 2px;
+    -webkit-animation-fill-mode: both;
+    animation-fill-mode: both;
+    display: inline-block; }
+
+}

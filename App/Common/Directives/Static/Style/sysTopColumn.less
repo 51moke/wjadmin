@@ -1,0 +1,21 @@
+.m-sysTopColumn{
+  float: left;
+  .m-systopNav li{float: left; /*background-color: #1bb6ff;*/ height: 42px; line-height: 42px;}
+  .m-systopNav li a{display: block; padding: 0px 15px; font-size: 14px; position: relative;text-decoration: none;}
+  .m-systopNav li a:hover{ text-decoration: none;}
+  .m-systopNav li:hover{background-color: #2d2d2d;}
+  .m-systopNav li.active{background-color: #e02222;}
+
+  .m-systopNav li.active .selected{
+    left: 50%;
+    bottom: 0;
+    position: absolute;
+    border-left: 6px solid transparent;
+    border-right: 6px solid transparent;
+    border-top: 6px solid #e02222;
+    display: inline-block;
+    margin: 0 0 -6px -7px;
+    width: 0;
+    height: 0;
+  }
+}

@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <!--<base href="/demo/">-->
+    <meta charset="utf-8">
+    <title>正在加载。。。</title>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <link href="Static/Style/plug.css" rel="stylesheet" type="text/css"/>
+    <link href="Static/Style/style.css" rel="stylesheet" type="text/css"/>
+</head>
+<body class=" ng-cloak" ng-cloak ng-app="App" ng-controller="__sysRoot">
+<sys-loading></sys-loading>
+<sys-alert></sys-alert>
+<div ng-if="system.pageState.isAlone"><ui-view></ui-view></div>
+<div ng-if="!system.pageState.isAlone" class="m-frameBox {{(system.currentData.sysData.top.state|S_UpperFirstLetter)+ '-module ' + system.currentData.controller+'-box'}}">
+    <div class="m-header">
+        <sys-top></sys-top>
+    </div>
+    <div class="m-main" >
+        <div class="m-left">
+            <sys-column></sys-column>
+        </div>
+        <div class="m-rightPos">
+            <div class="m-right">
+                <div class="location"><sys-position></sys-position></div>
+                <div class="m-mainContent"><ui-view></ui-view></div>
+            </div>
+        </div>
+    </div>
+</div>
+<script src="scripts/frame.js"></script>
+<script src="scripts/bundle.js"></script>
+<script src="scripts/routes.js"></script>
+<script src="scripts/templates.js"></script>
+</body>
+</html>

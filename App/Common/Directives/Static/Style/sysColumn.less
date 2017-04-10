@@ -1,0 +1,37 @@
+.m-sysColumn{
+  .page-sidebar-menu li.m-pathOpen > a .fa:before,.page-sidebar-menu li.m-pathDefault > a .fa:before {  content: "\f107";}
+  .page-sidebar-menu li.m-pathClose > a .fa:before {  content: "\f104";}
+
+
+  .page-sidebar-menu li a{display: block; padding: 11px 15px; margin-top: 0px;  color: #fff; font-size: 14px; text-decoration: none; position: relative;}
+  .page-sidebar-menu > li{/*border-top: 2px solid #055881;*/}
+  .page-sidebar-menu > li.active > a .selected {
+    display: block;
+    width: 8px;
+    height: 25px;
+    background-image: url(../ImagesDirective/sidebar-menu-arrow.png);
+    float: right;
+    position: absolute;
+    right: 0;
+    top: 8px;
+  }
+  .page-sidebar-menu li a .fa {
+    position: absolute;
+    right: 15px;
+    top: 12px;
+  }
+
+  .page-sidebar-menu > li:hover > a{ background-color:#303030; }
+  .page-sidebar-menu > .active > a{ background-color: #e02222 !important;}
+
+  .page-sidebar-menu li.m-pathClose>ul{display: none}
+
+  .page-sidebar-menu > li > ul  li.active > a,.page-sidebar-menu > li > ul  li  a:hover { background-color: #575757}
+  .page-sidebar-menu > li > ul  li{margin-top: 1px;}
+  .page-sidebar-menu > li > ul  li a{display: block; padding: 7px 15px;}
+  .page-sidebar-menu > li.m-pathOpen > .sub-menu{margin: 8px auto}
+
+  .page-sidebar-menu > li > ul > li > a{padding-left: 44px;}
+
+  .page-sidebar-menu > li > ul > li > ul > li >a{ padding-left:60px }
+}

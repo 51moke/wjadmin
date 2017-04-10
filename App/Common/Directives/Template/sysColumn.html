@@ -1,0 +1,37 @@
+<div class="m-sysColumn">
+    <ul class="page-sidebar-menu">
+    <li>
+        <!-- BEGIN SIDEBAR TOGGLER BUTTON 全屏按钮-->
+        <div ng-click="sidebarToggler()" class="sidebar-toggler hidden-phone"></div>
+        <!-- BEGIN SIDEBAR TOGGLER BUTTON 全屏按钮 -->
+    </li>
+    <li>&nbsp;</li>
+
+    <li ng-repeat="v in system.Column" ng-class="{'active':system.ColumnCurrent[v.id],'m-pathOpen':system.UserOnColumnOpen[v.id],'m-pathClose':system.UserOnColumnClose[v.id]}" class="m-pathDefault">
+        <a href="javascript:void(0);" ng-click="go(v.id)">
+            <i class="icon-bar-chart"></i>
+            <span class="title">{{v.title}}</span>
+            <span class="selected"></span>
+            <span ng-if="v.son" class="fa" ng-class="{true:'open'}[system.ColumnCurrent[v.id]]"></span>
+        </a>
+
+        <ul ng-if="v.son" class="sub-menu">
+            <li ng-repeat="sv in v.son" ng-class="{'active':system.ColumnCurrent[sv.id],'m-pathOpen':system.UserOnColumnOpen[sv.id],'m-pathClose':system.UserOnColumnClose[sv.id]}" class="m-pathDefault">
+                <a href="javascript:void(0);" ng-click="go(sv.id)">
+                    {{sv.title}}
+                    <span ng-if="sv.son" class="fa" ng-class="{true:'open'}[system.ColumnCurrent[sv.id]]"></span>
+                </a>
+
+                <ul ng-if="sv.son" class="sub-menu">
+                    <li  ng-class="{'active':system.ColumnCurrent[k.id],'m-pathOpen':system.UserOnColumnOpen[k.id],'m-pathClose':system.UserOnColumnClose[k.id]}" ng-repeat="k in sv.son" class="m-pathDefault">
+                        <a href="javascript:void(0);" ng-click="go(k.id)">{{k.title}}</a>
+                    </li>
+                </ul>
+
+            </li>
+        </ul>
+
+    </li>
+
+</ul>
+</div>

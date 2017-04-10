@@ -1,0 +1,22 @@
+<div class="m-sysLogin">
+    <div class="wj-login-wrapper">
+        <div class="wj-login-bg"></div>
+        <div class="wj-login-content" ng-class="{'wj-login-show':shContent}">
+            <div class="login-logo"></div>
+            <div class="login-title-bar">用户登录</div>
+            <div class="login-box">
+                <div class="login-input-box">
+                    <i class="fa fa-user"></i>
+                    <input type="text" name="username" placeholder="用户名" ng-model="email"
+                           class="ng-pristine ng-untouched ng-valid ng-empty">
+                </div>
+                <div class="login-input-box">
+                    <i class="fa fa-lock"></i>
+                    <input type="password" name="password" placeholder="密码" ng-model="password"
+                           class="ng-pristine ng-untouched ng-valid ng-empty">
+                </div>
+                <div class="wj-btn-box login-btn" ng-click="doLogin()">登&nbsp;录</div>
+            </div>
+        </div>
+    </div>
+</div>
